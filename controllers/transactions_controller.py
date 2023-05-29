@@ -140,7 +140,7 @@ def details_trans():
         #print("In Transfer functuon username is: ", user_found)
         return render_template('index.html')
     else:
-        return render_template('detailed-transactions.html',logedin_user = user_session)
+        return render_template('detailed-transactions.html', active_page = act_page, logedin_user = user_session)
 
 
 @transactions_ctrl.route("/api/v1/detailed-transactions",methods=["POST", "GET"])
