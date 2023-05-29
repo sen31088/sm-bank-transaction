@@ -37,9 +37,9 @@ def recent_transcations(input_data, source):
             ##print(trans_list1)
             trans_list = [trans_list1[x:x+9] for x in range(0, len(trans_list1), 9)]
             if source == 'admin':
-                return render_template('admin-recent-transactions.html', data = trans_list, messages = msg, logedin_user = user_session)
+                return render_template('admin-recent-transactions.html', active_page = act_page, data = trans_list, messages = msg, logedin_user = user_session)
             else:
-                return render_template('recent-transactions.html', data = trans_list, messages = msg, logedin_user = user_session)
+                return render_template('recent-transactions.html', active_page = act_page, data = trans_list, messages = msg, logedin_user = user_session)
 
    
            
